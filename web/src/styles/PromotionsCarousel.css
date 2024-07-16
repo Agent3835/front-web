@@ -1,0 +1,22 @@
+.carousel-container {
+    width: 100%; /* Adjust the width as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .carousel .slide img {
+    max-height: 400px; /* Adjust the max height as needed */
+    object-fit: cover; /* Ensure the image covers the container */
+  }
+  
+  .carousel .legend {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
