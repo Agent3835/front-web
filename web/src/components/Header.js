@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -38,6 +39,11 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+        </div>
+        <div className="login-button">
+          <Link to="/formlogin">
+            <button className="login-btn">Login</button>
+          </Link>
         </div>
       </div>
     </header>
