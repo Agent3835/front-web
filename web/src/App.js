@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Installations from "./pages/Installations";
 import Products from "./pages/Products";
 import FormLogin from "./pages/FormLogin";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/FormLogin" element={<FormLogin />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

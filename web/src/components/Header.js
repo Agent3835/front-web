@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header className="main-header">
+      <div className="header-top">
+        </div>
       <div className="header-page">
         <div className="logo-container">
           <img
@@ -42,7 +43,7 @@ const Header = () => {
         </div>
         <div className="login-button">
           <Link to="/formlogin">
-            <button className="login-btn">Login</button>
+          <button class="login-btn" role="button">Login</button>
           </Link>
         </div>
       </div>
