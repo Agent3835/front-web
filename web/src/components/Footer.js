@@ -29,11 +29,11 @@ const Footer = () => {
                 <div className="footer-section">
                     <h4>ATENCIÓN AL CLIENTE:</h4>
                     <p> 0322103835@ut-tijuana.edu.mx </p>
-                    <h4>DESCARGA LA APP</h4>
+                    <h4>EJECUTA LA APP USANDO EXPO</h4>
                     <div className="app-links">
-                        {/* <a href="#"><img src={require('../assets/appstore.png')} alt="App Store" /></a>
-                        <a href="#"><img src={require('../assets/googleplay.png')} alt="Google Play" /></a>
-                        <a href="#"><img src={require('../assets/appgallery.png')} alt="AppGallery" /></a> */}
+                        <a href="#"><img src={require('../assets/icons/qr.png')} alt="Expo" /></a>
+                        {/* <a href="#"><img src={require('../assets/googleplay.png')} alt="Google Play" /></a>
+                        <a href="#"><img src={require('../assets/appgallery.png')} alt="AppGallery" /></a>  */}
                     </div>
                 </div>
             </div>
