@@ -1,27 +1,26 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
-import Cart from "./pages/Cart";
-import Home from "./pages/Home";
-import Installations from "./pages/Installations";
-import Products from "./pages/Products";
-import FormLogin from "./pages/FormLogin";
-import Footer from "./components/Footer";
+import React from 'react';
+import { BrowserRouter as Router} from 'react-router-dom';
+import AdminMenu from './admin/components/AdminMenu';
+import VanillaMenu from './components/VanillaMenu';
+import authService from './services/authService';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
-  return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/installations" element={<Installations />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/FormLogin" element={<FormLogin />} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
+    const currentUser = authService.getCurrentUser();
+
+    return (
+        <Router>
+            <div className="App">
+            {(currentUser === null || currentUser.role !== 'admin') && <Header />}
+                <div className="main-content">
+                    {(currentUser === null || currentUser.role !== 'admin') ? <VanillaMenu /> : <AdminMenu />}
+                    
+                </div>
+                {(currentUser === null || currentUser.role !== 'admin') && <Footer />}
+            </div>
+        </Router>
+    );
 }
 
 export default App;
