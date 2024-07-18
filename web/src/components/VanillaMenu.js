@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Home from '../pages/Home';
 import Cart from '../pages/Cart';
 import Installations from '../pages/Installations';
@@ -8,6 +8,7 @@ import FormLogin from '../pages/FormLogin';
 
 function VanillaMenu() {
     return(
+        <>
         <div className='content'>
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -18,6 +19,7 @@ function VanillaMenu() {
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </div>
+        </>
     );
 }
 
